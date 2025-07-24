@@ -1,7 +1,7 @@
 context("start epiviz standalone")
 
 test_that("startStandalone creates a proper object", {
-  seqinfo <- GenomeInfoDb::Seqinfo(c("chr1", "chr2"), c(10,20))
+  seqinfo <- Seqinfo::Seqinfo(c("chr1", "chr2"), c(10,20))
   app <- startStandalone(seqinfo=seqinfo, non_interactive=TRUE)
   expect_is(app, "EpivizApp")
   

@@ -29,7 +29,7 @@
 #' epiviz browser. See package vignette for further detail.
 #' 
 #' @param gene_track (OrganismDb) an object of type \code{\link[OrganismDbi]{OrganismDb}} or \code{\link[GenomicFeatures]{TxDb}} 
-#' @param seqinfo (Seqinfo) an object of type \code{\link[GenomeInfoDb]{Seqinfo}} from which sequence names and lengths are obtained
+#' @param seqinfo (Seqinfo) an object of type \code{\link[Seqinfo]{Seqinfo}} from which sequence names and lengths are obtained
 #' @param keep_seqlevels (character) vector of sequence names to include in the standalone app
 #' @param chr (character) chromosome to browse to on app startup.
 #' @param start (integer) start location to browse to on app startup.
@@ -45,13 +45,13 @@
 #' 
 #' @examples
 #' # see package vignete for example usage
-#' seqinfo <- GenomeInfoDb::Seqinfo(c("chr1","chr2"), c(10,20))
+#' seqinfo <- Seqinfo::Seqinfo(c("chr1","chr2"), c(10,20))
 #' app <- startStandalone(seqinfo=seqinfo, non_interactive=TRUE)
 #' app$stop_app()
 #' 
 #' @import epivizr
 #' @import epivizrServer
-#' @import GenomeInfoDb
+#' @import Seqinfo
 #' @import methods
 #' @import BiocGenerics
 #' @import GenomicFeatures
@@ -166,7 +166,7 @@ startStandalone <- function(gene_track=NULL, seqinfo=NULL, keep_seqlevels=NULL,
 #' epiviz browser. See package vignette for further detail.
 #' 
 #' @param gene_track (OrganismDb) an object of type \code{\link[OrganismDbi]{OrganismDb}} or \code{\link[GenomicFeatures]{TxDb}} 
-#' @param seqinfo (Seqinfo) an object of type \code{\link[GenomeInfoDb]{Seqinfo}} from which sequence names and lengths are obtained
+#' @param seqinfo (Seqinfo) an object of type \code{\link[Seqinfo]{Seqinfo}} from which sequence names and lengths are obtained
 #' @param keep_seqlevels (character) vector of sequence names to include in the standalone app
 #' @param chr (character) chromosome to browse to on app startup.
 #' @param start (integer) start location to browse to on app startup.
@@ -180,13 +180,13 @@ startStandalone <- function(gene_track=NULL, seqinfo=NULL, keep_seqlevels=NULL,
 #' 
 #' @examples
 #' # see package vignete for example usage
-#' seqinfo <- GenomeInfoDb::Seqinfo(c("chr1","chr2"), c(10,20))
+#' seqinfo <- Seqinfo::Seqinfo(c("chr1","chr2"), c(10,20))
 #' app <- startStandalone(seqinfo=seqinfo, non_interactive=TRUE)
 #' app$stop_app()
 #' 
 #' @import epivizr
 #' @import epivizrServer
-#' @import GenomeInfoDb
+#' @import Seqinfo
 #' @import methods
 #' @import BiocGenerics
 #' @import GenomicFeatures

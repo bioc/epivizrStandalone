@@ -20,7 +20,7 @@ startStandaloneApp(
 \arguments{
 \item{gene_track}{(OrganismDb) an object of type \code{\link[OrganismDbi]{OrganismDb}} or \code{\link[GenomicFeatures]{TxDb}}}
 
-\item{seqinfo}{(Seqinfo) an object of type \code{\link[GenomeInfoDb]{Seqinfo}} from which sequence names and lengths are obtained}
+\item{seqinfo}{(Seqinfo) an object of type \code{\link[Seqinfo]{Seqinfo}} from which sequence names and lengths are obtained}
 
 \item{keep_seqlevels}{(character) vector of sequence names to include in the standalone app}
 
@@ -51,7 +51,7 @@ epiviz browser. See package vignette for further detail.
 }
 \examples{
 # see package vignete for example usage
-seqinfo <- GenomeInfoDb::Seqinfo(c("chr1","chr2"), c(10,20))
+seqinfo <- Seqinfo::Seqinfo(c("chr1","chr2"), c(10,20))
 app <- startStandalone(seqinfo=seqinfo, non_interactive=TRUE)
 app$stop_app()
 
